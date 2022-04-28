@@ -1,0 +1,38 @@
+ALGORITHM sentence
+VAR
+i : INTEGER;
+l,nbmot,nbvoy : INTEGER := 0;
+s : STRING;
+c : CHAR;
+
+BEGIN
+read (c)
+WHILE (c <> '.') DO
+    write ("give a sentenece which ends with a point")
+END_WHILE
+read (s)
+FOR i FROM s[0] TO s.length-1 DO
+    l++;
+END_FOR
+    return l;
+
+IF (c =" ") THEN
+    nbmot := nbmot+1;
+END_IF
+write("the word number is",nbmot);
+for (i in s){
+    switch (s[i]) {
+    case 'a':
+    case 'e':
+    case 'i':
+    case 'o':
+    case 'u':
+    nbvoy++;
+    break;
+    }
+}
+return nbvoy;   
+
+
+
+END
